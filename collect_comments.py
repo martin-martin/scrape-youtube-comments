@@ -27,7 +27,7 @@ print(title)
 # --------------- LOAD ALL COMMENTS ---------------
 # defining the numbers here so we can reference and easily change them
 SCROLL_PAUSE_TIME = 2
-CYLCLES = 7
+CYCLES = 7
 
 # we know there's always exactly one HTML element, so let's access it
 html = driver.find_element_by_tag_name('html')
@@ -38,11 +38,12 @@ html.send_keys(Keys.PAGE_DOWN)  # one time sometimes wasn't enough
 # if they fail (because too little time allowed), the whole script breaks
 time.sleep(SCROLL_PAUSE_TIME * 3)
 # and now for loading the hidden comments by scrolling down and up
-for i in range(CYLCLES):
+for i in range(CYCLES):
     html.send_keys(Keys.END)
     time.sleep(SCROLL_PAUSE_TIME)
-    html.send_keys(Keys.PAGE_UP)
-    time.sleep(SCROLL_PAUSE_TIME)
+    # might not be necessary; try out without it.
+    # html.send_keys(Keys.PAGE_UP)
+    # time.sleep(SCROLL_PAUSE_TIME)
 
 
 
