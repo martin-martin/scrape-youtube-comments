@@ -24,3 +24,10 @@ processing.
 * transform the output into a JSON dict that maps file names to comment lists
 * append to output file instead of overwriting, in order to create a youtube
     comment corpus
+    
+---
+
+## NOTES
+
+- implementing **posting** to youtube is still an unsolved challenge
+- posting to twitter works using Selenium - so there's no absoulte need for that API key
